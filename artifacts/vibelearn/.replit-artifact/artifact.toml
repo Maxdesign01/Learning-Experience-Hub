@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "VibeLearn"
+description = "A personal learning operating system for mastering Vibe Coding through structured lessons, practical StockCheck projects, resources, and meaningful progress tracking."
+version = "1.0.0"
+id = "artifacts/vibelearn"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25167
+
+[services.development]
+run = "pnpm --filter @workspace/vibelearn run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/vibelearn", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/vibelearn/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25167"
+BASE_PATH = "/"

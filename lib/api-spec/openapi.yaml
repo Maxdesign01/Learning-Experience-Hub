@@ -10,6 +10,18 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: dashboard
+    description: Dashboard overview
+  - name: curriculum
+    description: Stages and lessons
+  - name: progress
+    description: Learning progress
+  - name: resources
+    description: Learning resources
+  - name: projects
+    description: Practical projects
+  - name: profile
+    description: Learner profile
 paths:
   /healthz:
     get:
@@ -24,7 +36,222 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /dashboard/summary:
+    get:
+      operationId: getDashboardSummary
+      tags: [dashboard]
+      summary: Get the learner dashboard summary
+      responses:
+        "200":
+          description: Dashboard summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DashboardSummary"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /stages:
+    get:
+      operationId: getStages
+      tags: [curriculum]
+      summary: List curriculum stages
+      responses:
+        "200":
+          description: Curriculum stages
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Stage"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /lessons:
+    get:
+      operationId: getLessons
+      tags: [curriculum]
+      summary: List lessons
+      parameters:
+        - name: stageId
+          in: query
+          schema:
+            type: [integer, "null"]
+        - name: status
+          in: query
+          schema:
+            type: [string, "null"]
+            enum: [not_started, in_progress, completed, needs_review]
+        - name: search
+          in: query
+          schema:
+            type: [string, "null"]
+      responses:
+        "200":
+          description: Lessons
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Lesson"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /lessons/{id}:
+    get:
+      operationId: getLesson
+      tags: [curriculum]
+      summary: Get a lesson
+      parameters:
+        - $ref: "#/components/parameters/Id"
+      responses:
+        "200":
+          description: Lesson details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LessonDetail"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /lessons/{id}/progress:
+    patch:
+      operationId: updateLessonProgress
+      tags: [progress]
+      summary: Update lesson progress
+      parameters:
+        - $ref: "#/components/parameters/Id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LessonProgressInput"
+      responses:
+        "200":
+          description: Updated progress
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LessonProgress"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /resources:
+    get:
+      operationId: getResources
+      tags: [resources]
+      summary: List learning resources
+      parameters:
+        - name: type
+          in: query
+          schema:
+            type: [string, "null"]
+        - name: search
+          in: query
+          schema:
+            type: [string, "null"]
+      responses:
+        "200":
+          description: Resources
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Resource"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /projects:
+    get:
+      operationId: getProjects
+      tags: [projects]
+      summary: List practical projects
+      responses:
+        "200":
+          description: Projects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Project"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /projects/{id}:
+    get:
+      operationId: getProject
+      tags: [projects]
+      summary: Get a practical project
+      parameters:
+        - $ref: "#/components/parameters/Id"
+      responses:
+        "200":
+          description: Project details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProjectDetail"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /profile:
+    get:
+      operationId: getProfile
+      tags: [profile]
+      summary: Get learner profile
+      responses:
+        "200":
+          description: Learner profile
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Profile"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+    patch:
+      operationId: updateProfile
+      tags: [profile]
+      summary: Update learner onboarding preferences
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProfileUpdate"
+      responses:
+        "200":
+          description: Updated learner profile
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Profile"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
 components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+  responses:
+    Unauthorized:
+      description: Authentication required
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
   schemas:
     HealthStatus:
       type: object
@@ -33,4 +260,286 @@ components:
           type: string
       required:
         - status
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+      required: [error]
+    Stage:
+      type: object
+      properties:
+        id:
+          type: integer
+        number:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        lessonCount:
+          type: integer
+        completedCount:
+          type: integer
+        progress:
+          type: integer
+        status:
+          type: string
+          enum: [not_started, in_progress, completed]
+      required: [id, number, title, description, lessonCount, completedCount, progress, status]
+    LessonProgress:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [not_started, in_progress, completed, needs_review]
+        progress:
+          type: integer
+        lastActivity:
+          type: [string, "null"]
+        exerciseComplete:
+          type: boolean
+        quizComplete:
+          type: boolean
+      required: [status, progress, lastActivity, exerciseComplete, quizComplete]
+    LessonProgressInput:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [not_started, in_progress, completed, needs_review]
+        progress:
+          type: integer
+          minimum: 0
+          maximum: 100
+        exerciseComplete:
+          type: boolean
+        quizComplete:
+          type: boolean
+      required: [status, progress]
+    Lesson:
+      type: object
+      properties:
+        id:
+          type: integer
+        stageId:
+          type: integer
+        stageNumber:
+          type: integer
+        stageTitle:
+          type: string
+        title:
+          type: string
+        topic:
+          type: string
+        difficulty:
+          type: string
+          enum: [foundations, beginner, intermediate, advanced]
+        duration:
+          type: integer
+        description:
+          type: string
+        projectTask:
+          type: string
+        progress:
+          $ref: "#/components/schemas/LessonProgress"
+      required: [id, stageId, stageNumber, stageTitle, title, topic, difficulty, duration, description, projectTask, progress]
+    LessonDetail:
+      allOf:
+        - $ref: "#/components/schemas/Lesson"
+        - type: object
+          properties:
+            objective:
+              type: string
+            whyItMatters:
+              type: string
+            keyConcepts:
+              type: array
+              items:
+                type: string
+            explanation:
+              type: string
+            example:
+              type: string
+            exercise:
+              type: string
+            challenge:
+              type: string
+            completionCriteria:
+              type: array
+              items:
+                type: string
+            resourceIds:
+              type: array
+              items:
+                type: integer
+          required: [objective, whyItMatters, keyConcepts, explanation, example, exercise, challenge, completionCriteria, resourceIds]
+    Resource:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        type:
+          type: string
+          enum: [documentation, video, article, tutorial, practice, project, quiz, reference]
+        url:
+          type: string
+        topic:
+          type: string
+        stageNumber:
+          type: integer
+        difficulty:
+          type: string
+        description:
+          type: string
+        estimatedMinutes:
+          type: integer
+        status:
+          type: string
+          enum: [new, saved, completed]
+      required: [id, title, type, url, topic, stageNumber, difficulty, description, estimatedMinutes, status]
+    Project:
+      type: object
+      properties:
+        id:
+          type: integer
+        number:
+          type: integer
+        title:
+          type: string
+        goal:
+          type: string
+        skills:
+          type: array
+          items:
+            type: string
+        status:
+          type: string
+          enum: [not_started, in_progress, completed]
+        progress:
+          type: integer
+        taskCount:
+          type: integer
+        completedTaskCount:
+          type: integer
+        lessonCount:
+          type: integer
+        githubUrl:
+          type: [string, "null"]
+      required: [id, number, title, goal, skills, status, progress, taskCount, completedTaskCount, lessonCount, githubUrl]
+    ProjectDetail:
+      allOf:
+        - $ref: "#/components/schemas/Project"
+        - type: object
+          properties:
+            tasks:
+              type: array
+              items:
+                $ref: "#/components/schemas/ProjectTask"
+            challenges:
+              type: array
+              items:
+                type: string
+          required: [tasks, challenges]
+    ProjectTask:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        completed:
+          type: boolean
+      required: [id, title, description, completed]
+    Activity:
+      type: object
+      properties:
+        id:
+          type: integer
+        type:
+          type: string
+          enum: [lesson, exercise, project, quiz, session]
+        title:
+          type: string
+        detail:
+          type: string
+        createdAt:
+          type: string
+      required: [id, type, title, detail, createdAt]
+    DashboardSummary:
+      type: object
+      properties:
+        profile:
+          $ref: "#/components/schemas/Profile"
+        currentStage:
+          $ref: "#/components/schemas/Stage"
+        currentLesson:
+          $ref: "#/components/schemas/Lesson"
+        overallProgress:
+          type: integer
+        totalLessons:
+          type: integer
+        completedLessons:
+          type: integer
+        currentStreak:
+          type: integer
+        longestStreak:
+          type: integer
+        weeklyActivity:
+          type: array
+          items:
+            type: integer
+        recentActivity:
+          type: array
+          items:
+            $ref: "#/components/schemas/Activity"
+        featuredProject:
+          $ref: "#/components/schemas/Project"
+      required: [profile, currentStage, currentLesson, overallProgress, totalLessons, completedLessons, currentStreak, longestStreak, weeklyActivity, recentActivity, featuredProject]
+    Profile:
+      type: object
+      properties:
+        id:
+          type: integer
+        displayName:
+          type: string
+        level:
+          type: string
+          enum: [complete_beginner, beginner, intermediate, advanced]
+        minutesPerDay:
+          type: integer
+        preferredTime:
+          type: string
+        preferredDays:
+          type: array
+          items:
+            type: string
+        onboardingComplete:
+          type: boolean
+        lastActiveAt:
+          type: [string, "null"]
+      required: [id, displayName, level, minutesPerDay, preferredTime, preferredDays, onboardingComplete, lastActiveAt]
+    ProfileUpdate:
+      type: object
+      properties:
+        displayName:
+          type: string
+          minLength: 1
+        level:
+          type: string
+          enum: [complete_beginner, beginner, intermediate, advanced]
+        minutesPerDay:
+          type: integer
+          enum: [15, 30, 45, 60, 120]
+        preferredTime:
+          type: string
+        preferredDays:
+          type: array
+          items:
+            type: string
+      required: [displayName, level, minutesPerDay, preferredTime, preferredDays]
 

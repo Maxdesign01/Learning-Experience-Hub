@@ -1,0 +1,1802 @@
+You are a senior full-stack engineer, learning-experience designer, curriculum designer, and technical mentor.
+
+I want you to BUILD a production-quality responsive web application called:
+
+# VibeLearn
+A personal learning management system designed specifically to help me learn Vibe Coding from beginner to advanced, faster and more effectively.
+
+This is NOT a generic LMS.
+
+It is my personal technical learning system.
+
+The system should combine:
+
+1. A structured learning roadmap
+2. Daily learning tasks
+3. Learning materials/resources
+4. Progress tracking
+5. Practice exercises
+6. Project-based learning
+7. GitHub learning
+8. AI coding agent learning
+9. AI model learning
+10. Notes
+11. Quizzes/checkpoints
+12. Streaks and activity tracking
+13. Learning analytics
+14. Inactivity detection
+15. Email reminders when I stop learning
+16. A practical capstone project called StockCheck
+
+The application should feel like a serious personal learning operating system, not a basic todo app.
+
+==================================================
+# MY LEARNING GOAL
+==================================================
+
+I want to learn Vibe Coding from BASIC → INTERMEDIATE → ADVANCED.
+
+I currently want to understand:
+
+- How websites and web applications work
+- HTML
+- CSS
+- JavaScript
+- Git
+- GitHub
+- GitHub repositories
+- branches
+- commits
+- pull requests
+- GitHub CLI
+- npm
+- Node.js
+- package.json
+- React
+- TypeScript
+- APIs
+- backend development
+- databases
+- authentication
+- deployment
+- AI coding assistants
+- AI coding agents
+- AI models
+- model selection
+- tool calling
+- MCP
+- RAG
+- multi-agent systems
+- production engineering
+- testing
+- security
+- performance
+- deployment
+
+I don't want to simply copy AI-generated code.
+
+The system must teach me WHAT is happening, WHY it is happening, HOW to use it, and HOW to debug it.
+
+The learning experience should progressively move from:
+
+LEARN
+→ UNDERSTAND
+→ PRACTICE
+→ BUILD
+→ DEBUG
+→ REVIEW
+→ EXPLAIN
+→ APPLY
+
+==================================================
+# MY MAIN PRACTICAL PROJECT
+==================================================
+
+Use a real project throughout the curriculum:
+
+# StockCheck
+
+StockCheck is an inventory reconciliation application for a company that sells bags and shoes.
+
+The real problem:
+
+I receive many stock items every day.
+
+I need to compare:
+
+PHYSICAL STOCK RECEIVED
+
+against
+
+SUPPLIER RECEIPT / INVOICE
+
+and accurately identify:
+
+- matched items
+- shortages
+- excess quantities
+- missing items
+- extra items
+- price mismatches
+- calculation errors
+- total value mismatches
+- grand total mismatches
+
+The system must teach me how to progressively build this application.
+
+Do NOT build the entire StockCheck application immediately.
+
+Use it as the long-term learning project.
+
+For example:
+
+HTML/CSS
+→ build a simple StockCheck interface
+
+JavaScript
+→ calculate quantity differences
+
+Git
+→ version the project
+
+GitHub
+→ create repository and push project
+
+React
+→ turn the interface into components
+
+TypeScript
+→ type the inventory data
+
+API
+→ connect frontend to backend
+
+Database
+→ store reconciliation records
+
+Authentication
+→ add users
+
+CSV/XLSX
+→ import inventory and receipts
+
+Testing
+→ verify reconciliation calculations
+
+AI
+→ extract receipt information
+
+AI agent
+→ create an intelligent reconciliation workflow
+
+Deployment
+→ deploy StockCheck
+
+This project should grow as my knowledge grows.
+
+==================================================
+# CURRICULUM
+==================================================
+
+Create a structured curriculum with these stages.
+
+STAGE 0 — HOW SOFTWARE WORKS
+
+Teach:
+
+- What a computer program is
+- What a web application is
+- Browser
+- frontend
+- backend
+- API
+- database
+- server
+- localhost
+- terminal
+- command line
+- Node.js
+- npm
+- package.json
+- dependencies
+- scripts
+- development server
+
+First practical lesson:
+
+"What actually happens when I type:
+
+npm run dev
+
+?"
+
+Explain:
+
+Terminal
+→ npm
+→ package.json
+→ script
+→ Node.js
+→ dependencies
+→ development server
+→ localhost
+→ browser
+
+==================================================
+
+STAGE 1 — HTML
+
+Teach:
+
+- HTML fundamentals
+- elements
+- tags
+- attributes
+- semantic HTML
+- forms
+- inputs
+- buttons
+- tables
+- accessibility
+
+Practice:
+
+Build the first StockCheck page using plain HTML.
+
+==================================================
+
+STAGE 2 — CSS
+
+Teach:
+
+- selectors
+- box model
+- spacing
+- typography
+- colors
+- display
+- flexbox
+- grid
+- responsive design
+- media queries
+- component styling
+
+Practice:
+
+Turn StockCheck into a responsive interface.
+
+==================================================
+
+STAGE 3 — JAVASCRIPT
+
+Teach:
+
+- variables
+- data types
+- arrays
+- objects
+- functions
+- conditionals
+- loops
+- array methods
+- DOM
+- events
+- modules
+- async JavaScript
+- promises
+- fetch
+- error handling
+
+Practice:
+
+Build StockCheck reconciliation calculations.
+
+Example:
+
+Stock quantity = 8
+Receipt quantity = 7
+
+Difference = +1
+
+Status = Excess
+
+Also teach the difference between:
+
+Matched
+Shortage
+Excess
+Missing from Stock
+Extra in Stock
+Price Mismatch
+Total Value Mismatch
+Receipt Calculation Error
+Grand Total Mismatch
+
+==================================================
+
+STAGE 4 — GIT
+
+Teach:
+
+- What Git is
+- Why version control matters
+- repositories
+- working directory
+- staging
+- commits
+- branches
+- merge
+- conflicts
+- history
+- reverting
+- resetting
+- .gitignore
+
+Commands:
+
+git init
+git status
+git add
+git commit
+git log
+git branch
+git switch
+git merge
+git pull
+git push
+git clone
+
+Every concept should have:
+
+EXPLANATION
+→ COMMAND
+→ PRACTICE
+→ REAL STOCKCHECK EXAMPLE
+
+==================================================
+
+STAGE 5 — GITHUB
+
+Teach:
+
+- Git vs GitHub
+- repositories
+- README
+- branches
+- issues
+- pull requests
+- releases
+- Actions
+- collaboration
+- GitHub CLI
+
+Teach GitHub CLI commands gradually.
+
+Examples:
+
+gh auth status
+gh repo create
+gh repo clone
+gh repo view
+gh issue create
+gh pr create
+
+Make me practice using GitHub with StockCheck.
+
+==================================================
+
+STAGE 6 — NODE.JS + NPM
+
+Teach:
+
+- Node.js
+- npm
+- package.json
+- package-lock.json
+- dependencies
+- devDependencies
+- npm scripts
+- npm install
+- npm run
+- npm update
+- node_modules
+- environment variables
+
+Teach me to understand what happens rather than blindly running commands.
+
+==================================================
+
+STAGE 7 — REACT
+
+Teach:
+
+- components
+- JSX
+- props
+- state
+- events
+- forms
+- lists
+- conditional rendering
+- hooks
+- useState
+- useEffect
+- component architecture
+- reusable components
+
+Practice:
+
+Convert StockCheck into React.
+
+Create components such as:
+
+Dashboard
+ReconciliationTable
+InventoryRow
+ReceiptUpload
+SummaryCards
+StatusBadge
+Filters
+DetailDrawer
+
+==================================================
+
+STAGE 8 — TYPESCRIPT
+
+Teach:
+
+- types
+- interfaces
+- unions
+- enums
+- generics
+- type inference
+- function types
+- optional properties
+- API types
+- type-safe components
+
+Create StockCheck types such as:
+
+Product
+InventoryItem
+ReceiptItem
+Reconciliation
+Supplier
+User
+Discrepancy
+
+==================================================
+
+STAGE 9 — APIS
+
+Teach:
+
+- What an API is
+- HTTP
+- requests
+- responses
+- GET
+- POST
+- PUT
+- PATCH
+- DELETE
+- JSON
+- status codes
+- REST APIs
+- authentication
+- API errors
+
+Practice connecting StockCheck frontend to an API.
+
+==================================================
+
+STAGE 10 — DATABASES
+
+Teach:
+
+- database fundamentals
+- SQL
+- tables
+- rows
+- columns
+- primary keys
+- foreign keys
+- relationships
+- indexes
+- queries
+- CRUD
+- migrations
+
+Use PostgreSQL/Supabase for practical work.
+
+Build StockCheck database tables.
+
+==================================================
+
+STAGE 11 — AUTHENTICATION + SECURITY
+
+Teach:
+
+- authentication
+- authorization
+- sessions
+- passwords
+- roles
+- permissions
+- environment variables
+- secrets
+- input validation
+- SQL injection
+- XSS
+- CSRF
+- API security
+
+StockCheck roles:
+
+Admin
+Inventory Staff
+Viewer
+
+==================================================
+
+STAGE 12 — FILE IMPORTS
+
+Teach:
+
+- CSV
+- XLSX
+- file uploads
+- parsing
+- validation
+- data mapping
+- duplicate detection
+- error handling
+
+StockCheck should support:
+
+Manual entry
+CSV
+XLSX
+Paste table
+
+Mapping example:
+
+Product Code → SKU
+Qty → Quantity
+Cost Price → Unit Price
+Colour → Color
+
+==================================================
+
+STAGE 13 — TESTING
+
+Teach:
+
+- Why testing matters
+- unit tests
+- integration tests
+- end-to-end tests
+- edge cases
+- regression testing
+
+Use StockCheck reconciliation calculations as examples.
+
+Important test cases:
+
+Stock = 8
+Receipt = 8
+→ Matched
+
+Stock = 8
+Receipt = 7
+→ Excess +1
+
+Stock = 7
+Receipt = 8
+→ Shortage -1
+
+Missing SKU
+→ Validation error
+
+Duplicate SKU
+→ Duplicate warning
+
+Wrong unit price
+→ Price mismatch
+
+Incorrect receipt total
+→ Calculation error
+
+==================================================
+
+STAGE 14 — AI-ASSISTED CODING
+
+Teach me how to use AI properly.
+
+Cover:
+
+- ChatGPT
+- Claude
+- GitHub Copilot
+- coding assistants
+- coding agents
+- prompt engineering for coding
+- context
+- system instructions
+- project instructions
+- AGENTS.md
+- CLAUDE.md
+- code review
+- debugging with AI
+- refactoring with AI
+
+Teach the difference between:
+
+AI ASSISTANT
+
+AI CODING ASSISTANT
+
+AI CODING AGENT
+
+MODEL
+
+AGENT
+
+TOOLS
+
+CONTEXT
+
+WORKFLOW
+
+==================================================
+
+STAGE 15 — AI MODELS
+
+Teach me what AI models are.
+
+Explain:
+
+- model
+- context window
+- reasoning
+- coding capability
+- multimodal capability
+- latency
+- cost
+- tool use
+- model selection
+
+Teach me how to choose models based on the task instead of blindly choosing the biggest model.
+
+Create a comparison framework:
+
+TASK
+→ REQUIRED CAPABILITY
+→ MODEL TYPE
+→ WHY
+
+Examples:
+
+Simple explanation
+→ fast model
+
+Complex debugging
+→ reasoning model
+
+Large codebase task
+→ strong coding/reasoning model
+
+Image/UI analysis
+→ multimodal model
+
+Long autonomous coding task
+→ coding agent
+
+Do not hard-code specific model names unless they are current and verified.
+
+==================================================
+
+STAGE 16 — AI AGENTS
+
+Teach:
+
+- What an agent is
+- model + tools + instructions + context
+- tool calling
+- planning
+- execution
+- verification
+- memory
+- agent loops
+- human approval
+- agent safety
+
+Build small agent exercises.
+
+Example:
+
+Agent reads a StockCheck CSV
+→ identifies anomalies
+→ explains them
+→ asks for approval
+→ generates reconciliation report
+
+==================================================
+
+STAGE 17 — MCP
+
+Teach:
+
+- What MCP is
+- MCP servers
+- tools
+- resources
+- prompts
+- how agents interact with external systems
+
+Use practical examples.
+
+==================================================
+
+STAGE 18 — RAG
+
+Teach:
+
+- embeddings
+- vector databases
+- retrieval
+- chunking
+- semantic search
+- context injection
+- RAG architecture
+
+Create a small learning assistant that can answer questions from my own learning materials.
+
+==================================================
+
+STAGE 19 — ADVANCED AI ENGINEERING
+
+Teach:
+
+- agent architectures
+- multi-agent systems
+- orchestration
+- tool calling
+- structured outputs
+- evaluation
+- guardrails
+- observability
+- AI reliability
+- hallucination prevention
+- human-in-the-loop systems
+
+Use StockCheck as the final practical example.
+
+==================================================
+
+STAGE 20 — PRODUCTION
+
+Teach:
+
+- deployment
+- environment variables
+- CI/CD
+- monitoring
+- logging
+- performance
+- accessibility
+- security
+- backups
+- database migrations
+- error handling
+- production debugging
+
+Deploy StockCheck.
+
+==================================================
+# LEARNING SYSTEM
+==================================================
+
+The application should not just display the curriculum.
+
+It must actively help me learn.
+
+Each lesson should contain:
+
+1. Lesson title
+2. Stage
+3. Difficulty
+4. Learning objective
+5. Why it matters
+6. Explanation
+7. Key concepts
+8. Example
+9. Practical exercise
+10. StockCheck application
+11. Learning materials
+12. Documentation
+13. Video/resource links
+14. Quiz
+15. Challenge
+16. Completion criteria
+17. Notes
+18. Reflection
+19. Estimated duration
+
+==================================================
+# LESSON STRUCTURE
+==================================================
+
+Every lesson should follow:
+
+UNDERSTAND
+↓
+SEE AN EXAMPLE
+↓
+TRY IT
+↓
+BUILD IT
+↓
+BREAK IT
+↓
+FIX IT
+↓
+EXPLAIN IT
+
+Do not allow me to mark a lesson complete just because I opened it.
+
+Completion should be based on meaningful activity.
+
+==================================================
+# LEARNING MATERIALS
+==================================================
+
+Create a resource library.
+
+Each resource should contain:
+
+Title
+Type
+URL
+Topic
+Stage
+Difficulty
+Description
+Estimated time
+Status
+
+Resource types:
+
+Documentation
+Video
+Article
+Tutorial
+Practice
+Project
+Quiz
+Reference
+
+Prioritize official documentation where appropriate.
+
+For example:
+
+HTML → MDN
+CSS → MDN
+JavaScript → MDN
+Git → Git documentation
+GitHub → GitHub Docs
+React → React documentation
+TypeScript → TypeScript documentation
+Node.js → Node.js documentation
+PostgreSQL → PostgreSQL documentation
+Supabase → Supabase documentation
+
+For AI-related resources, use current official documentation where possible.
+
+Do not invent URLs.
+
+==================================================
+# DASHBOARD
+==================================================
+
+Create a beautiful responsive dashboard.
+
+Desktop:
+
+Sidebar navigation
+Main dashboard
+Learning progress
+Today's learning
+Current stage
+Current lesson
+Streak
+Weekly activity
+Upcoming lessons
+Project progress
+
+Mobile:
+
+Bottom navigation or compact navigation
+Cards should stack
+Tables should become horizontally scrollable or responsive cards
+No broken layouts
+
+Dashboard sections:
+
+TODAY'S LEARNING
+
+CURRENT STAGE
+
+OVERALL PROGRESS
+
+CURRENT STREAK
+
+WEEKLY ACTIVITY
+
+STOCKCHECK PROJECT
+
+RECENT ACTIVITY
+
+NEXT LESSON
+
+==================================================
+# RESPONSIVE LEARNING TABLE
+==================================================
+
+Create a major curriculum table.
+
+Columns:
+
+Stage
+Lesson
+Topic
+Difficulty
+Estimated Time
+Status
+Progress
+Project Task
+Resources
+Action
+
+Desktop should show the complete table.
+
+Mobile should transform intelligently.
+
+Do NOT simply shrink the desktop table until it becomes unusable.
+
+On mobile:
+
+Each row can become a card with:
+
+Stage
+Lesson
+Status
+Progress
+Duration
+Action
+
+Allow filtering and sorting.
+
+Filters:
+
+Stage
+Difficulty
+Status
+Topic
+Project
+Duration
+
+Search:
+
+Search lessons, concepts, resources and projects.
+
+==================================================
+# PROGRESS TRACKING
+==================================================
+
+Track:
+
+Overall progress
+Stage progress
+Lesson completion
+Exercises completed
+Projects completed
+Quizzes completed
+Study sessions
+Time spent
+Current streak
+Longest streak
+Last active date
+
+Progress states:
+
+Not Started
+In Progress
+Completed
+Needs Review
+
+Do not use completion percentages without explaining what they represent.
+
+==================================================
+# DAILY LEARNING
+==================================================
+
+Every day show:
+
+Today's goal
+Today's lesson
+Today's exercise
+Today's project task
+Estimated duration
+
+Example:
+
+TODAY
+
+Lesson:
+Understanding npm run dev
+
+Time:
+30 minutes
+
+Practice:
+Create a basic Node project
+
+StockCheck:
+Create the initial project structure
+
+Challenge:
+Explain what happens when npm run dev executes.
+
+==================================================
+# SMART REVIEW
+==================================================
+
+The system should periodically bring older concepts back.
+
+Use:
+
+New
+→ Practice
+→ Review
+→ Retest
+→ Mastered
+
+If I repeatedly fail a concept, mark it:
+
+Needs Review
+
+and recommend returning to that topic.
+
+==================================================
+# QUIZZES
+==================================================
+
+Each major lesson should have a small quiz.
+
+Question types:
+
+Multiple choice
+True/false
+Short answer
+Code interpretation
+Debugging
+Practical task
+
+Do not make quizzes purely memorization-based.
+
+Example:
+
+"What happens first when you run npm run dev?"
+
+Or:
+
+"Why does a StockCheck item with stock quantity 8 and receipt quantity 7 produce an excess?"
+
+==================================================
+# PROJECT TRACKING
+==================================================
+
+Create a separate Project section.
+
+Projects:
+
+1. HTML StockCheck prototype
+2. CSS responsive StockCheck
+3. JavaScript reconciliation engine
+4. Git versioned StockCheck
+5. GitHub StockCheck repository
+6. React StockCheck
+7. TypeScript StockCheck
+8. API-connected StockCheck
+9. Database-backed StockCheck
+10. Authenticated StockCheck
+11. CSV/XLSX import
+12. Automated testing
+13. AI receipt extraction
+14. AI reconciliation assistant
+15. AI agent
+16. Production deployment
+
+Each project should show:
+
+Goal
+Skills
+Status
+Tasks
+Progress
+GitHub repository
+Lessons connected to project
+Challenges
+Notes
+
+==================================================
+# NOTES
+==================================================
+
+Allow me to create notes attached to:
+
+Lessons
+Topics
+Projects
+Resources
+
+Support:
+
+Markdown
+Code blocks
+Links
+Tags
+
+==================================================
+# LEARNING ANALYTICS
+==================================================
+
+Create an analytics page.
+
+Show:
+
+Study time this week
+Study time this month
+Lessons completed
+Exercises completed
+Projects completed
+Quiz performance
+Strong topics
+Weak topics
+Topics needing review
+Current streak
+Longest streak
+Activity calendar
+
+Also show:
+
+"Where should I focus next?"
+
+This should be based on my actual progress, not arbitrary recommendations.
+
+==================================================
+# INACTIVITY SYSTEM
+==================================================
+
+This is VERY IMPORTANT.
+
+The application must detect when I stop learning.
+
+Track:
+
+last_active_at
+
+If I haven't had meaningful learning activity for:
+
+3 days
+→ gentle reminder
+
+7 days
+→ stronger reminder
+
+14 days
+→ re-engagement email
+
+Allow settings:
+
+Reminder frequency
+Email address
+Enable/disable reminders
+Preferred learning days
+Preferred learning time
+Inactivity threshold
+
+Do NOT send emails simply because I opened the dashboard.
+
+Meaningful activity could include:
+
+Completing a lesson
+Completing an exercise
+Taking a quiz
+Working on a project task
+Completing a study session
+
+==================================================
+# EMAIL REMINDERS
+==================================================
+
+Build a proper email reminder system.
+
+Use a transactional email provider such as Resend.
+
+Do NOT pretend emails are being sent if the email provider is not configured.
+
+Create:
+
+Email settings
+Email templates
+Reminder scheduling
+Last reminder sent
+Reminder history
+
+Example emails:
+
+3 DAYS INACTIVE:
+
+"Your learning streak is waiting for you"
+
+7 DAYS:
+
+"You've been away from VibeLearn"
+
+14 DAYS:
+
+"Let's get back to building"
+
+Keep emails helpful rather than annoying.
+
+Include:
+
+What I was learning
+Where I stopped
+My current progress
+The next lesson
+Estimated learning time
+CTA: Continue Learning
+
+Example:
+
+"You stopped at React State Management.
+
+You're 42% through Stage 7.
+
+Your next lesson takes about 25 minutes.
+
+Continue where you left off."
+
+==================================================
+# SCHEDULING
+==================================================
+
+Implement scheduled jobs for inactivity checks.
+
+Use an architecture appropriate for the chosen deployment platform.
+
+Do not rely on the browser being open.
+
+Use a server-side scheduled job / cron.
+
+The job should:
+
+1. Find users who are inactive
+2. Check reminder preferences
+3. Check whether a reminder was already sent
+4. Determine the correct reminder level
+5. Send the email
+6. Record the reminder
+7. Avoid duplicate emails
+
+==================================================
+# DATABASE
+==================================================
+
+Use PostgreSQL/Supabase.
+
+Design a clean schema.
+
+Suggested tables:
+
+users
+profiles
+stages
+lessons
+lesson_resources
+resources
+lesson_progress
+study_sessions
+exercises
+exercise_attempts
+quizzes
+quiz_attempts
+projects
+project_tasks
+notes
+activity_events
+streaks
+reminder_settings
+email_reminders
+
+Create proper relationships.
+
+Use timestamps.
+
+Track:
+
+created_at
+updated_at
+last_active_at
+
+where appropriate.
+
+==================================================
+# TECH STACK
+==================================================
+
+Use:
+
+Next.js
+TypeScript
+Tailwind CSS
+shadcn/ui
+Supabase
+PostgreSQL
+Resend
+GitHub integration where appropriate
+
+Use a clean modern architecture.
+
+Do not over-engineer the first version.
+
+==================================================
+# DESIGN SYSTEM
+==================================================
+
+The interface should feel:
+
+Modern
+Clean
+Focused
+Technical
+Calm
+Professional
+
+Avoid:
+
+Excessive gradients
+Huge decorative elements
+Clutter
+Gamification overload
+Too many colors
+Unnecessary animations
+
+Use strong hierarchy.
+
+Prioritize:
+
+Readability
+Spacing
+Accessibility
+Responsive design
+Clear states
+Useful feedback
+
+Use semantic colors for:
+
+Success
+Warning
+Error
+Info
+
+Do not rely on color alone.
+
+==================================================
+# NAVIGATION
+==================================================
+
+Desktop sidebar:
+
+Dashboard
+Learn
+Roadmap
+Projects
+Resources
+Practice
+Notes
+Analytics
+Settings
+
+Mobile:
+
+Dashboard
+Learn
+Projects
+Progress
+More
+
+==================================================
+# SETTINGS
+==================================================
+
+Settings should include:
+
+Profile
+Learning preferences
+Study schedule
+Reminder settings
+Email preferences
+Theme
+Notifications
+Account
+
+==================================================
+# AI LEARNING ASSISTANT
+==================================================
+
+Eventually add an AI tutor.
+
+The tutor should help me understand lessons.
+
+It should NOT immediately give me answers.
+
+Use a teaching approach:
+
+1. Ask what I understand
+2. Give a hint
+3. Give a smaller example
+4. Ask me to try
+5. Review my answer
+6. Explain mistakes
+7. Only give the full solution when appropriate
+
+The AI tutor should know:
+
+My current stage
+Current lesson
+Previous performance
+Weak topics
+Current StockCheck project progress
+
+==================================================
+# IMPORTANT LEARNING PRINCIPLES
+==================================================
+
+The application should encourage active learning.
+
+Avoid:
+
+"Read this and click complete."
+
+Instead encourage:
+
+Explain
+Practice
+Build
+Debug
+Recall
+Apply
+
+Use spaced repetition where useful.
+
+Use project-based learning.
+
+Connect theory to StockCheck.
+
+==================================================
+# AI CODING SAFETY
+==================================================
+
+Because I am learning vibe coding, the system should teach me not to blindly trust AI-generated code.
+
+When using AI-generated code, encourage:
+
+1. Understand
+2. Inspect
+3. Run
+4. Test
+5. Verify
+6. Commit
+
+Teach me to ask:
+
+"What does this code do?"
+
+"Why was this approach used?"
+
+"What could go wrong?"
+
+"How can I test this?"
+
+==================================================
+# CLAUDE / AI AGENT LEARNING
+==================================================
+
+Include a dedicated section teaching how to work with Claude and other coding agents.
+
+Teach:
+
+Prompting
+Context
+Project instructions
+CLAUDE.md
+AGENTS.md
+Repository context
+Planning
+Implementation
+Testing
+Debugging
+Code review
+Git workflow
+Agent permissions
+Human approval
+
+Show practical workflows such as:
+
+PLAN
+↓
+ASK AGENT
+↓
+REVIEW PLAN
+↓
+IMPLEMENT
+↓
+RUN
+↓
+TEST
+↓
+INSPECT
+↓
+FIX
+↓
+COMMIT
+
+==================================================
+# MVP FIRST
+==================================================
+
+Do NOT attempt to build every advanced feature at once.
+
+Build in phases.
+
+PHASE 1:
+
+Authentication
+Dashboard
+Curriculum
+Lessons
+Progress
+Resources
+Projects
+
+PHASE 2:
+
+Daily learning
+Study sessions
+Analytics
+Streaks
+Notes
+Quizzes
+
+PHASE 3:
+
+Inactivity tracking
+Email reminders
+Scheduled jobs
+Resend
+
+PHASE 4:
+
+AI tutor
+Smart review
+Learning recommendations
+
+PHASE 5:
+
+Advanced analytics
+AI learning assistant
+Adaptive curriculum
+
+==================================================
+# DEVELOPMENT WORKFLOW
+==================================================
+
+Before writing code:
+
+1. Analyze requirements.
+2. Propose architecture.
+3. Define database schema.
+4. Define routes.
+5. Define components.
+6. Define MVP.
+7. Explain implementation plan.
+
+Then build incrementally.
+
+After every major feature:
+
+- run tests
+- check TypeScript
+- check lint
+- check responsive behavior
+- check accessibility
+- check database behavior
+- check error states
+
+Do not silently make major architectural decisions.
+
+==================================================
+# CODE QUALITY
+==================================================
+
+Write production-quality code.
+
+Use:
+
+Strong typing
+Reusable components
+Clear naming
+Small functions
+Separation of concerns
+Error handling
+Loading states
+Empty states
+Error states
+Accessible components
+Responsive layouts
+
+Avoid:
+
+Massive components
+Duplicated code
+Hard-coded data everywhere
+Fake backend behavior
+Fake email sending
+Fake authentication
+Fake progress calculations
+
+If something requires an external service that has not been configured, create a clear integration boundary and explain what is missing.
+
+==================================================
+# SEED DATA
+==================================================
+
+Create realistic seed curriculum data.
+
+At minimum create:
+
+20 stages/major milestones or fewer if appropriate to the actual curriculum structure.
+
+Each stage should contain lessons.
+
+Do not make every lesson generic.
+
+Use the actual learning progression described above.
+
+Start with:
+
+Stage 0:
+How software works
+
+Lesson 1:
+What actually happens when I type npm run dev?
+
+Lesson 2:
+What is Node.js?
+
+Lesson 3:
+What is npm?
+
+Lesson 4:
+What is package.json?
+
+Lesson 5:
+What is localhost?
+
+Then continue progressively.
+
+==================================================
+# FIRST USER EXPERIENCE
+==================================================
+
+When I first sign in, ask:
+
+What is your current level?
+
+Options:
+
+Complete Beginner
+Beginner
+Intermediate
+Advanced
+
+Then ask:
+
+How much time can you learn per day?
+
+15 minutes
+30 minutes
+45 minutes
+1 hour
+2+ hours
+
+Preferred days:
+
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+
+Preferred learning time.
+
+Then generate:
+
+My Learning Plan
+
+The system should recommend a reasonable daily workload.
+
+==================================================
+# IMPORTANT
+==================================================
+
+I am learning this technology while building the system.
+
+Therefore, the application itself should be structured so that I can inspect the code and learn from it.
+
+Do not hide everything behind abstraction.
+
+Prefer understandable architecture.
+
+When implementing complex functionality, explain:
+
+WHAT
+WHY
+HOW
+
+==================================================
+# FINAL REQUIREMENT
+==================================================
+
+Build this as a real application, not a static mockup.
+
+I want:
+
+Working frontend
+Working backend
+Working database
+Working authentication
+Real progress persistence
+Real activity tracking
+Real scheduled reminder architecture
+Real email integration boundary
+Responsive UI
+Error handling
+Loading states
+Empty states
+Seed data
+Tests
+
+Start with Phase 1.
+
+Before coding Phase 1, show me:
+
+1. Architecture
+2. Database schema
+3. Folder structure
+4. Main routes
+5. Component structure
+6. Implementation plan
+
+Then begin implementation.
+
+Do not jump directly into building the entire application.
+
+The goal is to create a system that genuinely helps me become a competent Vibe Coder, not just an application that looks impressive.
